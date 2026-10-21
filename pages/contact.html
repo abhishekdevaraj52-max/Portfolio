@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/effects.css?v=3" />
+    <link rel="stylesheet" href="../assets/css/loader.css" />
+    <script type="importmap">
+        {"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.180.0/examples/jsm/"}}
+    </script>
+</head>
+<body>
+    <main id="portfolio-loader" aria-label="Loading portfolio">
+        <section class="portfolio-loader-card" aria-live="polite">
+            <div class="portfolio-loader-badge">WORKING</div>
+            <div class="portfolio-loader-name">ABHISHEK B D</div>
+            <div class="portfolio-loader-number" data-portfolio-loader-percent>0%</div>
+            <div class="portfolio-loader-track-row"><span>LOADING</span><span data-portfolio-loader-percent>0%</span></div>
+            <div class="portfolio-loader-track" role="progressbar" aria-label="Loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="portfolio-loader-fill" data-portfolio-loader-fill></span></div>
+        </section>
+    </main>
+    <div id="three-bg-container" aria-hidden="true" data-iron-glb="../assets/blender/character/spiderman.glb" data-bg-video="../assets/videos/tripo-showcase.mp4"></div>
+    <script src="../assets/js/loader.js" defer></script>
+    <script type="module" src="../assets/js/three-scene.js?v=4"></script>
+</body>
+</html>

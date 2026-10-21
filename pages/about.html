@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Abhishek B D</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+    <link rel="stylesheet" href="../assets/css/light-mode.css" />
+    <link rel="stylesheet" href="../assets/css/effects.css?v=3" />
+    <link rel="stylesheet" href="../assets/css/loader.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <script type="importmap">
+        {"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.180.0/examples/jsm/"}}
+    </script>
+</head>
+<body>
+    <main id="portfolio-loader" aria-label="Loading portfolio">
+        <section class="portfolio-loader-card" aria-live="polite">
+            <div class="portfolio-loader-badge">WORKING</div>
+            <div class="portfolio-loader-name">ABHISHEK B D</div>
+            <div class="portfolio-loader-number" data-portfolio-loader-percent>0%</div>
+            <div class="portfolio-loader-track-row"><span>LOADING</span><span data-portfolio-loader-percent>0%</span></div>
+            <div class="portfolio-loader-track" role="progressbar" aria-label="Loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="portfolio-loader-fill" data-portfolio-loader-fill></span></div>
+        </section>
+    </main>
+    <div id="three-bg-container" aria-hidden="true" data-iron-glb="../assets/blender/character/spiderman.glb" data-bg-video="../assets/videos/tripo-showcase.mp4"></div>
+    <header class="site-header scrolled">
+        <nav class="navbar container" aria-label="Primary navigation">
+            <a class="brand" href="../index.html"><span class="brand-mark">ABD</span><span class="brand-name">ABHISHEK B D</span></a>
+            <div class="nav-panel"><ul class="nav-links"><li><a class="nav-link" href="../index.html">HOME</a></li><li><a class="nav-link active" href="about.html">ABOUT</a></li><li><a class="nav-link" href="certificates.html">CERTIFICATES</a></li><li><a class="nav-link" href="contact.html">CONTACT</a></li></ul><div class="nav-actions"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light mode" aria-pressed="false"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button></div></div>
+        </nav>
+    </header>
+    <main class="portfolio-section about-section standalone-page">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">01 // PROFILE</p><h1>About Me</h1><p>The person behind the interface.</p></div>
+            <article class="terminal-card reveal" aria-label="About Abhishek B D">
+                <header class="terminal-header"><span class="terminal-user">@abhishekbd</span><span>PROFILE.LOG</span></header>
+                <div class="terminal-body"><p><span class="terminal-prompt">&gt;</span> I am <strong>ABHISHEK B D</strong>, a Computer Science Engineering student interested in programming, machine learning, web development, and emerging technologies.</p><p><span class="terminal-prompt">&gt;</span> I enjoy solving problems, learning new technologies, and developing practical software projects. My focus includes reliable applications, core programming concepts, and AI-driven systems.</p><p><span class="terminal-prompt">&gt;</span> I am motivated by curiosity and continuous learning through hands-on projects, technical exploration, and real-world problem solving.</p></div>
+            </article>
+        </div>
+    </main>
+    <script src="../assets/js/theme.js" defer></script>
+    <script src="../assets/js/animations.js" defer></script>
+    <script src="../assets/js/loader.js" defer></script>
+    <script type="module" src="../assets/js/three-scene.js?v=4"></script>
+</body>
+</html>

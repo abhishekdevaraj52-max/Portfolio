@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap");
+
+#portfolio-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 218, 205, 0.55), transparent 32%),
+    radial-gradient(circle at 86% 84%, rgba(204, 238, 239, 0.58), transparent 34%),
+    linear-gradient(120deg, #f8f5f4 0%, #eef1f8 52%, #f5f7f5 100%);
+  font-family: "Orbitron", "Trebuchet MS", sans-serif;
+  color: #17203f;
+  transition: opacity 650ms ease, visibility 650ms ease;
+}
+
+#portfolio-loader,
+#portfolio-loader * {
+  box-sizing: border-box;
+}
+
+#portfolio-loader .portfolio-loader-card {
+  width: min(950px, 100%);
+  padding: clamp(42px, 7vw, 72px) clamp(26px, 8vw, 145px) 44px;
+  border: 1px solid rgba(180, 186, 197, 0.7);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 24px 55px rgba(91, 100, 124, 0.18), inset 0 0 28px rgba(255, 255, 255, 0.78), 0 0 0 14px rgba(255, 255, 255, 0.16);
+  text-align: center;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: opacity 650ms ease, transform 650ms ease;
+}
+
+#portfolio-loader .portfolio-loader-badge {
+  display: inline-flex;
+  min-width: 116px;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid rgba(137, 146, 162, 0.5);
+  border-radius: 999px;
+  color: #566078;
+  background: rgba(236, 239, 244, 0.76);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  letter-spacing: 0.25em;
+}
+
+#portfolio-loader .portfolio-loader-name {
+  margin-top: 28px;
+  color: #d36a71;
+  font-size: clamp(12px, 1.5vw, 17px);
+  letter-spacing: 0.62em;
+  text-indent: 0.62em;
+}
+
+#portfolio-loader .portfolio-loader-number {
+  margin-top: 18px;
+  color: #ae263c;
+  font-size: clamp(74px, 11vw, 130px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-shadow: 0 5px 12px rgba(128, 38, 60, 0.2);
+}
+
+#portfolio-loader .portfolio-loader-track-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  color: #7b5366;
+  font-size: clamp(11px, 1.4vw, 16px);
+  letter-spacing: 0.24em;
+}
+
+#portfolio-loader .portfolio-loader-track {
+  height: 12px;
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(111, 125, 150, 0.64);
+  border-radius: 999px;
+  background: rgba(204, 213, 220, 0.86);
+  box-shadow: inset 0 2px 4px rgba(68, 76, 92, 0.16);
+}
+
+#portfolio-loader .portfolio-loader-fill {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #fa522d 0%, #a81336 56%, #171752 100%);
+  box-shadow: 0 0 12px rgba(206, 46, 54, 0.48);
+  transition: width 80ms linear;
+}
+
+#portfolio-loader.is-complete {
+  background: #000;
+}
+
+#portfolio-loader.is-complete .portfolio-loader-card {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+#portfolio-loader.is-dismissed {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 560px) {
+  #portfolio-loader .portfolio-loader-card {
+    padding-inline: 22px;
+    border-radius: 18px;
+  }
+
+  #portfolio-loader .portfolio-loader-name {
+    letter-spacing: 0.38em;
+    text-indent: 0.38em;
+  }
+
+  #portfolio-loader .portfolio-loader-track-row {
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #portfolio-loader,
+  #portfolio-loader .portfolio-loader-card,
+  #portfolio-loader .portfolio-loader-fill {
+    transition: none;
+  }
+}

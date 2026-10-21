@@ -1,0 +1,7 @@
+.resume-page{min-height:100vh;padding-top:150px}
+.resume-page .section-heading{margin-bottom:30px}
+.resume-page .section-heading h1{margin:0;color:var(--text);font:600 clamp(2.1rem,4vw,4rem)/1.05 'Orbitron',sans-serif;text-shadow:0 0 22px rgba(80,245,223,.24)}
+.resume-actions{display:flex;justify-content:center;margin:0 auto 28px}
+.resume-preview{width:min(900px,100%);height:min(78vh,1100px);min-height:500px;margin:0 auto;border:1px solid rgba(80,245,223,.38);background:#fff;box-shadow:0 18px 55px rgba(0,0,0,.3),0 0 35px rgba(80,245,223,.1)}
+.resume-preview iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:560px){.resume-page{padding-top:115px}.resume-preview{height:72vh;min-height:420px}}

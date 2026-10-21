@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Abhishek B D - futuristic developer portfolio landing page." />
+    <title>Abhishek B D // Developer Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/certifications.css" />
+    <link rel="stylesheet" href="assets/css/projects.css" />
+    <link rel="stylesheet" href="assets/css/social-contact.css" />
+    <link rel="stylesheet" href="assets/css/light-mode.css" />
+    <link rel="stylesheet" href="assets/css/hero-spiderman.css" />
+    <link rel="stylesheet" href="assets/css/effects.css?v=3" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <script type="importmap">
+        {"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.180.0/examples/jsm/"}}
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+</head>
+<body>
+    <main id="portfolio-loader" aria-label="Loading portfolio">
+        <section class="portfolio-loader-card" aria-live="polite">
+            <div class="portfolio-loader-badge">WORKING</div>
+            <div class="portfolio-loader-name">ABHISHEK B D</div>
+            <div class="portfolio-loader-number" data-portfolio-loader-percent>0%</div>
+            <div class="portfolio-loader-track-row"><span>LOADING</span><span data-portfolio-loader-percent>0%</span></div>
+            <div class="portfolio-loader-track" role="progressbar" aria-label="Loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="portfolio-loader-fill" data-portfolio-loader-fill></span></div>
+        </section>
+    </main>
+    <div id="three-bg-container" aria-hidden="true" data-iron-glb="assets/blender/character/spiderman.glb" data-bg-video="assets/videos/tripo-showcase.mp4"></div>
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="site-grid" aria-hidden="true"></div>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Primary navigation">
+            <a class="brand" href="#hero" aria-label="Abhishek B D home"><span class="brand-mark">ABD</span><span class="brand-name">ABHISHEK B D</span></a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-menu"><span></span><span></span><span></span></button>
+            <div class="nav-panel" id="primary-menu">
+                <ul class="nav-links">
+                    <li><a class="nav-link active" href="#hero">HOME</a></li>
+                    <li><a class="nav-link" href="#about" aria-label="About section">ABOUT</a></li>
+                    <li><a class="nav-link" href="#education" aria-label="Education section">EDUCATION</a></li>
+                    <li class="nav-dropdown"><button class="nav-link dropdown-toggle" type="button" aria-expanded="false">CAPABILITIES <span>+</span></button><ul class="dropdown-menu"><li><a href="#skills">SKILLS</a></li><li><a href="#projects">PROJECTS</a></li><li><a href="#certificates">CERTIFICATIONS</a></li><li><a href="#social">SIGNAL HUB</a></li></ul></li>
+                    <li><a class="nav-link" href="#contact" aria-label="Contact section">CONTACT</a></li>
+                </ul>
+                <div class="nav-actions"><span class="nav-status"><i></i> SYSTEM ONLINE</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light mode" aria-pressed="false"><i class="bi bi-moon-stars-fill" aria-hidden="true"></i></button></div>
+            </div>
+        </nav>
+    </header>
+    <main id="hero" class="hero-section">
+        <div class="hero-layout container">
+            <section class="hero-content reveal">
+                <p class="status-line"><span>●</span> BUILDING THINGS USERS LOVE</p>
+                <p class="hero-intro">HELLO, I'M</p>
+                <h1 class="hero-name">ABHISHEK<br /><span>B D</span></h1>
+                <p class="hero-role">COMPUTER SCIENCE ENGINEERING STUDENT</p>
+                <p class="hero-description">A passionate developer focused on building modern software, intelligent applications, and meaningful digital experiences.</p>
+                <div class="hero-actions"><a class="hud-button" href="pages/resume.html">VIEW RESUME <b aria-hidden="true">-&gt;</b></a><span class="availability"><i></i> STATUS // OPEN TO COLLABORATION</span></div>
+                <div class="hero-footer-meta"><span>LOC // ONLINE</span><span>FOCUS // SOFTWARE + AI</span><span>BUILD // 2026</span></div>
+            </section>
+            <section class="hud-stage reveal reveal-delay" aria-label="Futuristic developer interface">
+                <div class="hud-corner corner-top-left"></div><div class="hud-corner corner-top-right"></div><div class="hud-corner corner-bottom-left"></div><div class="hud-corner corner-bottom-right"></div>
+                <div class="hud-grid" aria-hidden="true"></div>
+                <div class="hud-rings" aria-hidden="true"><div class="ring ring-outer"></div><div class="ring ring-middle"></div><div class="ring ring-inner"></div><div class="ring ring-cross"></div><div class="ring-scan"></div></div>
+                <div class="hud-center"><span class="center-pulse"></span><span class="center-core">&lt;/&gt;</span><span class="center-label">DEV<br />CORE</span></div>
+                <div class="hud-line line-one" aria-hidden="true"></div><div class="hud-line line-two" aria-hidden="true"></div><div class="hud-line line-three" aria-hidden="true"></div>
+                <div class="hud-node node-one"></div><div class="hud-node node-two"></div><div class="hud-node node-three"></div>
+                <article class="hud-card card-ai"><span class="card-icon">[AI]</span><div><small>AI-ASSISTED</small><strong>Dev Tools</strong></div><b>01</b></article>
+                <article class="hud-card card-passion"><span class="card-icon">+</span><div><small>TECH PASSION</small><strong>Innovation</strong></div><b>02</b></article>
+                <article class="hud-card card-projects"><span class="card-icon">//</span><div><small>PROJECTS</small><strong>Active</strong></div><b>03</b></article>
+                <article class="hud-card card-certificates"><span class="card-icon">&lt;&gt;</span><div><small>CERTIFICATES</small><strong>Professional</strong></div><b>04</b></article>
+                <span class="hud-coordinate coord-one">X: 08.42 / Y: 91.07</span><span class="hud-coordinate coord-two">SIGNAL // STABLE</span>
+            </section>
+        </div>
+        <div class="spiderman-visual" aria-hidden="true">
+            <span class="spiderman-glow spiderman-glow-red"></span>
+            <span class="spiderman-glow spiderman-glow-blue"></span>
+            <span class="spiderman-web"></span>
+            <span class="spiderman-pulse"></span>
+            <span class="spiderman-particles"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <img class="spiderman-image" src="assets/images/spiderman-background.png" alt="" />
+        </div>
+        <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </main>
+    <section id="about" class="portfolio-section about-section" aria-labelledby="about-title">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">01 // PROFILE</p><h2 id="about-title">About Me</h2><p>A closer look at the person behind the interface.</p></div>
+            <article class="terminal-card reveal" aria-label="About Abhishek B D terminal profile">
+                <header class="terminal-header"><div class="terminal-dots" aria-hidden="true"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div><span class="terminal-user">@abhishekbd<span class="terminal-cursor" aria-hidden="true">_</span></span></header>
+                <div class="terminal-body">
+                    <p><span class="terminal-prompt">&gt;</span> I am <strong>ABHISHEK B D</strong>, a Computer Science Engineering student interested in programming, machine learning, web development, and emerging technologies.</p>
+                    <p><span class="terminal-prompt">&gt;</span> I enjoy solving problems, learning new technologies, and developing practical software projects. My focus includes building reliable applications, understanding core programming concepts, and exploring the latest advancements in software and AI-driven systems.</p>
+                    <p><span class="terminal-prompt">&gt;</span> I am motivated by curiosity and continuous learning, and I am excited to keep growing through hands-on projects, technical exploration, and real-world problem solving.</p>
+                </div>
+            </article>
+            <div class="about-action reveal"><a class="about-button" href="pages/about.html"><span aria-hidden="true">◎</span> Read the Full About Page <b>-&gt;</b></a></div>
+        </div>
+    </section>
+    <section id="education" class="portfolio-section education-section" aria-labelledby="education-title">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">01 // PATHWAY</p><h2 id="education-title">Education &amp; Journey</h2><p>Milestones that shaped the way I learn, build, and think.</p></div>
+            <div class="education-timeline">
+                <article class="education-card reveal"><div class="timeline-marker" aria-hidden="true"><span>CAP</span></div><div class="education-card-header"><div><p class="timeline-date">OCT 2023 — PRESENT</p><h3>B.Tech / UG – Computer Science and Engineering</h3><p class="institution">GM University</p></div><span class="score-badge">CGPA: 8.0</span></div><p class="education-description">Currently pursuing a degree in Computer Science and Engineering with a strong interest in software development and emerging technologies.</p></article>
+                <article class="education-card reveal"><div class="timeline-marker" aria-hidden="true"><span>&lt;/&gt;</span></div><div class="education-card-header"><div><p class="timeline-date">JUN 2021 — MAR 2023</p><h3>Pre-University Course (PUC / 12th)</h3><p class="institution">Siddeshwara PU College</p></div><span class="score-badge">78.00%</span></div><p class="education-description">Completed pre-university education with a focus on science and analytical learning.</p></article>
+                <article class="education-card reveal"><div class="timeline-marker" aria-hidden="true"><span>BK</span></div><div class="education-card-header"><div><p class="timeline-date">JUN 2020 — MAR 2021</p><h3>SSLC / 10th Grade</h3><p class="institution">Prarthana High School, Pallagatte</p></div><span class="score-badge">93.28%</span></div><p class="education-description">Built a strong academic foundation and developed consistent study habits.</p></article>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="portfolio-section skills-section" aria-labelledby="skills-title">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">02 // TOOLKIT</p><h2 id="skills-title">Skills &amp; Technologies</h2><p>Technologies and capabilities I use to build projects and solve problems.</p></div>
+            <div class="skills-grid">
+                <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">&lt;/&gt;</span><div><h3>Programming</h3><p>Python, Java, C, C++</p></div></div><div class="skill-progress" aria-label="Programming visual proficiency indicator: 86 percent"><span style="--progress:86%"></span></div><span class="skill-percent">86%</span></article>
+                <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">&lt;/&gt;</span><div><h3>Web Development</h3><p>HTML, CSS, JavaScript, React.js</p></div></div><div class="skill-progress" aria-label="Web Development visual proficiency indicator: 82 percent"><span style="--progress:82%"></span></div><span class="skill-percent">82%</span></article>
+                <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">DB</span><div><h3>Database</h3><p>MySQL, SQLite</p></div></div><div class="skill-progress" aria-label="Database visual proficiency indicator: 78 percent"><span style="--progress:78%"></span></div><span class="skill-percent">78%</span></article>
+                <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">{ }</span><div><h3>Concepts</h3><p>Data Structures and Algorithms, Machine Learning</p></div></div><div class="skill-progress" aria-label="Concepts visual proficiency indicator: 80 percent"><span style="--progress:80%"></span></div><span class="skill-percent">80%</span></article>
+                <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">TL</span><div><h3>Tools</h3><p>Git, Jupyter Notebook</p></div></div><div class="skill-progress" aria-label="Tools visual proficiency indicator: 76 percent"><span style="--progress:76%"></span></div><span class="skill-percent">76%</span></article>
+                <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">++</span><div><h3>Soft Skills</h3><p>Communication, Teamwork, Problem Solving, Decision Making, Time Management</p></div></div><div class="skill-progress" aria-label="Soft Skills visual proficiency indicator: 88 percent"><span style="--progress:88%"></span></div><span class="skill-percent">88%</span></article>
+                <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">文</span><div><h3>Languages</h3><p>English, Kannada</p></div></div><div class="skill-progress" aria-label="Languages visual proficiency indicator: 84 percent"><span style="--progress:84%"></span></div><span class="skill-percent">84%</span></article>
+            </div>
+            <p class="skill-note reveal">Progress indicators are visual portfolio elements, not official certifications or test results.</p>
+        </div>
+    </section>
+    <section id="certificates" class="portfolio-section certifications-section" aria-labelledby="certifications-title">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">03 // CREDENTIALS</p><h2 id="certifications-title">Certifications</h2><p>Professional certifications and learning achievements.</p></div>
+            <div class="cert-filter-tabs" role="tablist" aria-label="Filter certifications by provider">
+                <button class="cert-filter is-active" type="button" role="tab" aria-selected="true" aria-pressed="true" data-category="all"><i class="bi bi-collection" aria-hidden="true"></i><span>All</span><b>0</b></button>
+                <button class="cert-filter" type="button" role="tab" aria-selected="false" aria-pressed="false" data-category="gm-university"><i class="bi bi-building" aria-hidden="true"></i><span>GM University</span><b>0</b></button>
+                <button class="cert-filter" type="button" role="tab" aria-selected="false" aria-pressed="false" data-category="linkedin"><i class="bi bi-linkedin" aria-hidden="true"></i><span>LinkedIn</span><b>0</b></button>
+                <button class="cert-filter" type="button" role="tab" aria-selected="false" aria-pressed="false" data-category="hackerrank"><i class="bi bi-code-square" aria-hidden="true"></i><span>HackerRank</span><b>0</b></button>
+            </div>
+            <div class="cert-viewer reveal" aria-live="polite">
+                <button class="cert-nav-button" id="certPrevBtn" type="button" aria-label="Previous certificate"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+                <div class="cert-book" id="certMagazine" aria-label="Interactive certification viewer">
+                    <div class="cert-cover" id="certCover"><span class="cert-cover-mark">ABD</span><strong>LEARNING<br />ARCHIVE</strong><small>CERTIFICATIONS / 2026</small></div>
+                    <article class="cert-page" id="certPage" hidden>
+                        <div class="cert-image-frame"><img id="certImage" alt="" /><span class="cert-image-fallback" hidden>Certificate image unavailable</span></div>
+                        <div class="cert-page-info"><p class="cert-page-label">CERTIFICATE RECORD</p><h3 id="certTitle"></h3><p id="certIssuer"></p><dl><div><dt>Date</dt><dd id="certDate"></dd></div><div><dt>Category</dt><dd id="certCategory"></dd></div></dl><a class="cert-credential-button" id="certCredentialLink" target="_blank" rel="noopener noreferrer" hidden><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> View Certificate</a></div>
+                    </article>
+                    <div class="cert-book-shadow" aria-hidden="true"></div>
+                </div>
+                <button class="cert-nav-button" id="certNextBtn" type="button" aria-label="Next certificate"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="cert-viewer-meta"><span id="certCounter">Cover</span><div class="cert-progress-track" aria-hidden="true"><span id="certProgressBar"></span></div><div class="cert-dot-nav" id="certDotNav" aria-label="Choose certificate"></div></div>
+        </div>
+    </section>
+    <section id="projects" class="portfolio-section projects-section" aria-labelledby="projects-title">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">04 // SELECTED WORK</p><h2 id="projects-title">Projects</h2><p>Selected projects showcasing my experience in software development, machine learning, web development, and emerging technologies.</p></div>
+            <div class="project-stats" aria-label="Project statistics"><span><b id="projectFeaturedCount">0</b> Featured Builds</span><span><b id="projectLiveCount">0</b> Live Demos</span><span><b id="projectTechnologyCount">0</b> Technologies</span></div>
+            <div class="project-carousel" id="projectCarousel" tabindex="0" aria-label="Project carousel" aria-live="polite">
+                <button class="project-nav-button" id="prevProject" type="button" aria-label="Previous project"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+                <div class="project-slides" id="projectSlides"></div>
+                <button class="project-nav-button" id="nextProject" type="button" aria-label="Next project"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="project-carousel-meta"><span id="projectCounter">0 / 0</span><div class="project-dot-nav" id="projectDotNav" aria-label="Choose project"></div></div>
+        </div>
+    </section>
+    <section id="social" class="portfolio-section social-section" aria-labelledby="social-heading">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">05 // NETWORK</p><h2 id="social-heading">Signal_Hub.exe</h2><p>// grouped identity signals across every network...</p></div>
+            <div class="signal-grid">
+                <article class="signal-panel reveal"><header class="signal-terminal-bar"><span class="terminal-dots" aria-hidden="true"><i class="dot-red"></i><i class="dot-yellow"></i><i class="dot-green"></i></span><span>root@personal-social</span><b><i></i> LIVE</b></header><div class="signal-panel-body"><p class="signal-label">// personal social media profiles</p><div class="social-card-grid">
+                    <a class="social-card" href="https://www.instagram.com/___abhi__19___?stkn=cmlsNGdodXZjb3d3" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile @abhishek19"><i class="bi bi-instagram" aria-hidden="true"></i><span><strong>Instagram</strong><small>@abhishek19</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                    <a class="social-card" href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile @abhishek19"><i class="bi bi-facebook" aria-hidden="true"></i><span><strong>Facebook</strong><small>@abhishek19</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                    <a class="social-card" href="" target="_blank" rel="noopener noreferrer" aria-label="X profile @abhishek19"><i class="bi bi-twitter-x" aria-hidden="true"></i><span><strong>X</strong><small>@abhishek19</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                    <a class="social-card" href="" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile @abhishek19"><i class="bi bi-tiktok" aria-hidden="true"></i><span><strong>TikTok</strong><small>@abhishek19</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                    <a class="social-card" href="" target="_blank" rel="noopener noreferrer" aria-label="Pinterest profile @abhishek19"><i class="bi bi-pinterest" aria-hidden="true"></i><span><strong>Pinterest</strong><small>@abhishek19</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                </div></div></article>
+                <article class="signal-panel reveal"><header class="signal-terminal-bar"><span class="terminal-dots" aria-hidden="true"><i class="dot-red"></i><i class="dot-yellow"></i><i class="dot-green"></i></span><span>root@professional-social</span><b><i></i> LIVE</b></header><div class="signal-panel-body"><p class="signal-label">// professional social media and work channels</p><div class="social-card-grid">
+                    <a class="social-card" href="https://github.com/abhishekdevaraj52-max" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile abhishekdevaraj52-max"><i class="bi bi-github" aria-hidden="true"></i><span><strong>GitHub</strong><small>abhishekdevaraj52-max</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                    <a class="social-card" href="https://www.linkedin.com/in/abhishek-b-26a6a6421?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile Abhishek B D"><i class="bi bi-linkedin" aria-hidden="true"></i><span><strong>LinkedIn</strong><small>ABHISHEK B D</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                    <a class="social-card" href="mailto:abhishekdevaraj52@gmail.com" aria-label="Email abhishekdevaraj52@gmail.com"><i class="bi bi-envelope-at" aria-hidden="true"></i><span><strong>Email</strong><small>abhishekdevaraj52@gmail.com</small></span><b class="bi bi-arrow-up-right" aria-hidden="true"></b></a>
+                </div></div></article>
+                
+        </div>
+    </section>
+    <section id="contact" class="portfolio-section contact-section" aria-labelledby="contact-heading">
+        <div class="container section-container">
+            <div class="section-heading reveal"><p class="section-kicker">06 // OPEN CHANNEL</p><h2 id="contact-heading">Contact Me</h2><p>I’m always open to discussing new opportunities, collaborations, or technical projects in programming, machine learning, and software development.</p></div>
+            <div class="contact-layout">
+                <div class="contact-intro reveal"><p class="signal-label">// preferred contact channel</p><a class="contact-email" href="mailto:abhishekdevaraj52@gmail.com"><i class="bi bi-envelope-at" aria-hidden="true"></i>abhishekdevaraj52@gmail.com</a><p class="contact-service-note">The contact service is not configured yet. You can reach me directly by email.</p></div>
+                <form class="contact-form reveal" id="contact-form" novalidate>
+                    <div class="form-field"><label for="contact-name">Your Name</label><input id="contact-name" name="name" type="text" minlength="2" maxlength="40" autocomplete="name" required /><small class="field-error" data-error-for="contact-name"></small></div>
+                    <div class="form-field"><label for="contact-email">Your Email</label><input id="contact-email" name="email" type="email" autocomplete="email" required /><small class="field-error" data-error-for="contact-email"></small></div>
+                    <div class="form-field"><label for="contact-reason">Reason for Contact</label><select id="contact-reason" name="reason" required><option value="">Choose a reason</option><option>Opportunity</option><option>Collaboration</option><option>Technical project</option><option>Other</option></select><small class="field-error" data-error-for="contact-reason"></small></div>
+                    <div class="form-field"><label for="contact-confirm-email">Confirm Email</label><input id="contact-confirm-email" name="confirmEmail" type="email" autocomplete="email" required /><small class="field-error" data-error-for="contact-confirm-email"></small></div>
+                    <div class="form-field form-field-wide"><label for="contact-subject">Subject</label><input id="contact-subject" name="subject" type="text" minlength="5" maxlength="100" required /><small class="field-error" data-error-for="contact-subject"></small></div>
+                    <div class="form-field form-field-wide"><label for="contact-message">Your Message</label><textarea id="contact-message" name="message" minlength="100" maxlength="1000" required></textarea><small class="field-error" data-error-for="contact-message"></small></div>
+                    <div class="form-feedback" id="form-error" role="alert" hidden></div><div class="form-feedback form-success" id="form-success" role="status" hidden></div>
+                    <button class="contact-submit" type="submit"><i class="bi bi-send" aria-hidden="true"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/certifications.js" defer></script>
+    <script src="assets/js/projects.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+    <script src="assets/js/hero-spiderman.js" defer></script>
+    <script src="assets/js/loader.js" defer></script>
+    <script type="module" src="assets/js/three-scene.js?v=4"></script>
+</body>
+</html>
