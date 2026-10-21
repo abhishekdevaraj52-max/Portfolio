@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Local Security Module Demo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f2f5fa;
+      font-synthesis: none;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; }
+    main { width: min(920px, calc(100% - 32px)); margin: 48px auto; }
+    .eyebrow { color: #4256a5; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 8px 0; font-size: clamp(1.8rem, 5vw, 2.7rem); }
+    .intro { max-width: 680px; color: #526078; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 18px; margin-top: 28px; }
+    section { padding: 22px; border: 1px solid #dce2ed; border-radius: 14px; background: #fff; box-shadow: 0 8px 24px rgb(28 43 77 / 5%); }
+    h2 { margin: 0 0 12px; font-size: 1.12rem; }
+    label { display: block; margin: 14px 0 6px; font-weight: 650; }
+    input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #aeb8ca; border-radius: 8px; font: inherit; }
+    input:focus, button:focus-visible { outline: 3px solid #8aa4ff; outline-offset: 2px; }
+    button { min-height: 44px; margin-top: 14px; padding: 10px 16px; border: 0; border-radius: 8px; color: white; background: #3449a5; font: inherit; font-weight: 650; cursor: pointer; }
+    button:hover { background: #263986; }
+    .hint, .status { color: #526078; font-size: .92rem; line-height: 1.5; }
+    .results { margin-top: 20px; }
+    .result-list { display: grid; gap: 10px; padding: 0; list-style: none; }
+    .result { padding: 13px 15px; border-left: 5px solid #72809a; border-radius: 7px; background: #f7f8fb; }
+    .result strong { display: block; margin-bottom: 3px; }
+    .severity { display: inline-block; margin-bottom: 5px; font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .severity-high { color: #a51f28; }
+    .severity-medium { color: #865000; }
+    .severity-low, .severity-info { color: #3449a5; }
+    .severity-critical { color: #810d18; }
+    .empty { color: #526078; }
+    footer { margin-top: 22px; color: #526078; font-size: .86rem; }
+    @media (max-width: 540px) { main { margin: 28px auto; } section { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Standalone · local-only</p>
+    <h1>Security checks demo</h1>
+    <p class="intro">Try basic input checks or inspect this page for common link and form accessibility issues. Checks run in your browser; values are not stored or sent anywhere.</p>
+
+    <div class="grid">
+      <section aria-labelledby="email-heading">
+        <h2 id="email-heading">Email format test</h2>
+        <form id="email-form" novalidate>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-hint email-status">
+          <p class="hint" id="email-hint">A basic format check only; it cannot confirm that an address exists.</p>
+          <button type="submit">Validate email</button>
+          <p class="status" id="email-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section aria-labelledby="audit-heading">
+        <h2 id="audit-heading">Page DOM audit</h2>
+        <p class="hint">Checks link URL schemes, new-tab link protection, and form-field accessible names.</p>
+        <button id="audit-button" type="button">Run DOM audit</button>
+        <p class="status" id="audit-status" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <section class="results" aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <ul id="results-list" class="result-list" aria-live="polite" aria-relevant="additions text">
+        <li class="empty">Run a check to see its findings.</li>
+      </ul>
+    </section>
+
+    <footer>This demo does not make network requests, use external scripts, or save input in browser storage.</footer>
+  </main>
+
+  <script src="security.js"></script>
+  <script>
+    (function () {
+      "use strict";
+
+      var module = window.PortfolioSecurity;
+      var resultsList = document.getElementById("results-list");
+      var emailForm = document.getElementById("email-form");
+      var emailInput = document.getElementById("email");
+      var emailStatus = document.getElementById("email-status");
+      var auditStatus = document.getElementById("audit-status");
+
+      function renderFindings(items, emptyMessage) {
+        while (resultsList.firstChild) {
+          resultsList.removeChild(resultsList.firstChild);
+        }
+
+        if (items.length === 0) {
+          var empty = document.createElement("li");
+          empty.className = "empty";
+          empty.textContent = emptyMessage;
+          resultsList.appendChild(empty);
+          return;
+        }
+
+        items.forEach(function (item) {
+          var entry = document.createElement("li");
+          var severity = document.createElement("span");
+          var title = document.createElement("strong");
+          var explanation = document.createElement("span");
+
+          entry.className = "result";
+          severity.className = "severity severity-" + item.severity;
+          severity.textContent = item.severity;
+          title.textContent = item.title;
+          explanation.textContent = item.explanation + (item.element ? " (" + item.element + ")" : "");
+          entry.appendChild(severity);
+          entry.appendChild(title);
+          entry.appendChild(explanation);
+          resultsList.appendChild(entry);
+        });
+      }
+
+      emailForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var result = module.validateEmail(emailInput.value);
+        emailStatus.textContent = result.valid ? "The address matches the basic format." : result.findings[0].explanation;
+        renderFindings(result.findings, result.valid ? "No email-format issue found." : "No findings.");
+      });
+
+      document.getElementById("audit-button").addEventListener("click", function () {
+        var findings = module.auditDocument(document);
+        auditStatus.textContent = findings.length
+          ? findings.length + (findings.length === 1 ? " finding." : " findings.")
+          : "Audit complete. No findings.";
+        renderFindings(findings, "Audit complete. No findings.");
+      });
+    }());
+  </script>
+</body>
+</html>
